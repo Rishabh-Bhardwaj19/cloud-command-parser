@@ -1,7 +1,6 @@
 import json
 import os
 import subprocess
-import sys
 import time
 from collections import defaultdict
 from datetime import datetime, timezone
