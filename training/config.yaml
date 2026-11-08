@@ -1,0 +1,28 @@
+# Student model configuration
+
+model:
+  name: EleutherAI/pythia-70m
+  output_base: models
+
+dataset:
+  path: data/v1/train.jsonl
+  train_records: 1500
+
+training:
+  seed: 42
+  learning_rate: 0.00005
+  batch_size: 2
+  epochs: 3
+  max_sequence_length: 64
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  num_threads: 4
+  log_every_steps: 25
+
+versions:
+  python: "3.14.4"
+  torch: "2.15.0+cpu"
+  transformers: "5.22.2"
+  pyyaml: "6.0.3"
+
+device: cpu

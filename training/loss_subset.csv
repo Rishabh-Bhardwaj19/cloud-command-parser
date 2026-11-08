@@ -1,0 +1,4 @@
+version,epoch,average_loss,examples
+v1,1,0.864118,50
+v1,2,0.323187,50
+v1,3,0.199439,50

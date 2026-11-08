@@ -1,0 +1,13 @@
+{
+  "input_records": 3000,
+  "rejected": {
+    "a_invalid_json": 0,
+    "b_incorrect_keys": 0,
+    "c_invalid_intent": 0,
+    "d_invalid_slots": 126
+  },
+  "duplicates": 46,
+  "kept": 2828,
+  "accounting_total": 3000,
+  "sha256": "21f7a1d7a8a29c136d9a66baa42c6b38b17dbbe2f1b44bd855a69a526d278ee6"
+}

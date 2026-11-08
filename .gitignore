@@ -1,0 +1,22 @@
+# Python environments
+.venv/
+.venv-training/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model weights - distributed as Release assets
+models/v1/*
+!models/v1/model.sha256
+models/v2/*
+training/smoke-model/
+
+# Compressed model archives - uploaded as Release assets
+release-assets/*.tar.gz
+k8s/data/seaweedfs-default-values.yaml

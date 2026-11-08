@@ -1,0 +1,75 @@
+# SeaweedFS chart 4.52.0
+# Single-node local development configuration
+
+master:
+  enabled: true
+  replicas: 1
+
+  # Persistent storage for master metadata
+  data:
+    type: persistentVolumeClaim
+    size: 1Gi
+    storageClass: local-path
+
+  # Logs can be temporary
+  logs:
+    type: emptyDir
+
+  # Allow scheduling on our single Kubernetes node
+  affinity: ""
+
+volume:
+  enabled: true
+  replicas: 1
+
+  # Persistent storage for actual objects
+  dataDirs:
+    - name: data1
+      type: persistentVolumeClaim
+      size: 10Gi
+      storageClass: local-path
+      maxVolumes: 0
+
+  # Keep index alongside the data
+  idx: {}
+
+  # Allow scheduling on our single Kubernetes node
+  affinity: ""
+
+filer:
+  enabled: true
+  replicas: 1
+
+  # Persistent storage for filer metadata
+  data:
+    type: persistentVolumeClaim
+    size: 2Gi
+    storageClass: local-path
+
+  logs:
+    type: emptyDir
+
+  # Allow scheduling on our single Kubernetes node
+  affinity: ""
+
+# Enable the S3-compatible API
+s3:
+  enabled: true
+  replicas: 1
+  port: 8333
+  enableAuth: true
+
+  # Credentials will be read from a Kubernetes Secret
+  credentials:
+    admin:
+      existingSecret: seaweedfs-s3-admin
+      accessKeyKey: admin_access_key_id
+      secretKeyKey: admin_secret_access_key
+
+  # Create the two buckets required by the assignment
+  createBuckets:
+    - name: datasets
+      anonymousRead: false
+
+    - name: models
+      anonymousRead: false
