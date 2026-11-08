@@ -1,0 +1,86 @@
+{
+  "test": {
+    "tool": "Locust",
+    "duration_seconds": 120.5,
+    "users": 4,
+    "spawn_rate_per_second": 4,
+    "wait_between_requests_seconds": 0,
+    "total_requests": 194,
+    "successful_requests_from_locust_stats": 186,
+    "failed_requests": 8,
+    "success_rate_percent": 95.88,
+    "error_rate_percent": 4.12,
+    "average_latency_ms": 2440.7602254941594,
+    "p50_latency_ms": 2800.0,
+    "p95_latency_ms": 4800.0,
+    "maximum_latency_ms": 10491.926235001301,
+    "throughput_all_requests_per_second": 1.6299198353322506,
+    "failure_breakdown": {
+      "http_500_invalid_model_output": 8,
+      "locust_exceptions": 0
+    }
+  },
+  "successful_response_headers": {
+    "per_replica": {
+      "command-parser-7f87c8f5fc-8pp74": 115,
+      "command-parser-7f87c8f5fc-7cqb7": 72
+    },
+    "per_model_version": {
+      "v1": 187
+    },
+    "header_count_total": 187,
+    "locust_stats_success_total": 186,
+    "count_difference": 1,
+    "note": "The custom header counter differs by one event from the Locust aggregate CSV. Locust aggregate statistics are used for success and error percentages."
+  },
+  "resources": {
+    "sampling_duration_seconds": 120.5,
+    "sample_count": 154,
+    "per_pod_peak_usage": {
+      "command-parser-7f87c8f5fc-8pp74": {
+        "peak_cpu_millicores": 1002.0,
+        "peak_memory_mib": 470.0,
+        "samples": 95
+      },
+      "command-parser-7f87c8f5fc-7cqb7": {
+        "peak_cpu_millicores": 873.0,
+        "peak_memory_mib": 582.0,
+        "samples": 59
+      }
+    },
+    "note": "Peak observed values from periodic kubectl top sampling."
+  },
+  "cost_estimate": {
+    "currency": "INR",
+    "source": "data/rate_card.json (hypothetical rates)",
+    "cpu_limit_per_replica_vcpu": 1.0,
+    "memory_limit_per_replica_gib": 1.0,
+    "replicas_assumed": 2,
+    "hourly_cost_per_replica": 3.95,
+    "hourly_cost_two_replicas": 7.9,
+    "successful_requests_per_hour": 5556.85,
+    "cost_per_1000_successful_requests": 1.4217,
+    "two_minute_two_replica_cost": 0.2633,
+    "limitations": "Steady-state two-replica estimate. Excludes SeaweedFS, Traefik, control-plane, storage, network and other infrastructure costs."
+  },
+  "slo_and_error_budget": {
+    "availability_slo_percent": 95.0,
+    "error_budget_percent": 5.0,
+    "observed_success_percent": 95.88,
+    "observed_error_percent": 4.12,
+    "error_budget_consumed_percent": 82.47,
+    "availability_slo_met": true,
+    "latency_slo": "p95 below 5000 ms",
+    "observed_p95_ms": 4800.0,
+    "latency_slo_met": true,
+    "scope": "A short two-minute laboratory load test, not a production 30-day SLO measurement."
+  },
+  "limitations_and_improvements": [
+    "Eight requests returned HTTP 500 because generated model output failed JSON/schema validation.",
+    "The offline v1 validation set measured 96% JSON validity, consistent with the invalid-output issue under load.",
+    "CPU peaks approached the one-vCPU limit; HPA scaled to two replicas during load.",
+    "The p95 latency was close to the proposed five-second target.",
+    "The cluster uses one k3d node and does not demonstrate multi-node high availability.",
+    "Potential improvements include constrained decoding, a carefully tested output-repair retry, better training coverage, CPU/GPU optimization, and repeated longer-duration load tests."
+  ]
+}

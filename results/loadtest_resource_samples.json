@@ -1,0 +1,926 @@
+[
+  {
+    "timestamp_utc": "2026-11-08T19:57:18.822852+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:20.047729+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:21.324731+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:22.617633+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:23.963614+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:25.209293+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:26.442296+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:27.683124+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:28.896428+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:30.112378+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:31.326466+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:32.553263+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:33.756818+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:34.983349+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "3m",
+    "memory": "406Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:36.282204+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:37.538564+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:38.809431+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:40.051175+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:41.297656+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:42.531494+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:43.754070+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:44.991835+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:46.209351+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:47.482777+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:48.731790+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "371m",
+    "memory": "431Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:50.285601+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:51.512734+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:52.741048+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:53.972885+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:55.273798+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:56.591470+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:57.928211+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:57:59.279161+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:00.638166+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:02.018395+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:03.328528+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1001m",
+    "memory": "433Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:04.795002+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:04.795002+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:06.487574+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:06.487574+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:07.878324+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:07.878324+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:09.142816+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:09.142816+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:10.409963+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:10.409963+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:11.699366+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:11.699366+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:12.997433+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:12.997433+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:14.274090+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:14.274090+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:15.546407+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:15.546407+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:16.786487+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:16.786487+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:18.103152+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:18.103152+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:19.427963+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:19.427963+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "998m",
+    "memory": "432Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:20.709672+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:20.709672+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:21.960574+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:21.960574+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:23.261395+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:23.261395+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:24.526082+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:24.526082+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:25.775318+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:25.775318+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:27.026202+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:27.026202+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:28.270590+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:28.270590+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:29.509235+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:29.509235+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:30.760140+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:30.760140+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:31.995914+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:31.995914+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:33.223854+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:33.223854+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:34.508011+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "873m",
+    "memory": "355Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:34.508011+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "999m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:35.783730+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:35.783730+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:37.028640+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:37.028640+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:38.284304+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:38.284304+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:39.555187+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:39.555187+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:40.780378+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:40.780378+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:42.009770+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:42.009770+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:43.258743+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:43.258743+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:44.479631+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:44.479631+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:45.715067+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:45.715067+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:46.952996+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:46.952996+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:48.204086+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:48.204086+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:49.422419+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "753m",
+    "memory": "574Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:49.422419+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "976m",
+    "memory": "470Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:50.640805+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:50.640805+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:51.911066+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:51.911066+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:53.160988+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:53.160988+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:54.410989+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:54.410989+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:55.669110+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:55.669110+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:56.910675+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:56.910675+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:58.136923+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:58.136923+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:59.409079+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:58:59.409079+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:00.650082+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:00.650082+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:01.879197+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:01.879197+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:03.106840+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:03.106840+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:04.361672+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "673m",
+    "memory": "578Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:04.361672+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1000m",
+    "memory": "469Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:05.586004+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:05.586004+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:06.822057+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:06.822057+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:08.040300+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:08.040300+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:09.290225+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:09.290225+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:10.525698+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:10.525698+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:11.805067+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:11.805067+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:13.022783+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:13.022783+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:14.258638+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:14.258638+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:15.534144+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:15.534144+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:16.783927+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:16.783927+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:18.057409+00:00",
+    "pod": "command-parser-7f87c8f5fc-7cqb7",
+    "cpu": "528m",
+    "memory": "582Mi"
+  },
+  {
+    "timestamp_utc": "2026-11-08T19:59:18.057409+00:00",
+    "pod": "command-parser-7f87c8f5fc-8pp74",
+    "cpu": "1002m",
+    "memory": "468Mi"
+  }
+]

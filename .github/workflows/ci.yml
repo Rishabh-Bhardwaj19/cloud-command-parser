@@ -31,7 +31,11 @@ jobs:
             tools/score.py \
             tools/nacl_sim.py \
             tools/validate_subnets.py \
-            tools/make_bad_predictions.py
+            tools/make_bad_predictions.py \
+            tools/locustfile.py \
+            tools/sample_k8s_resources.py \
+            tools/run_locust_benchmark.py \
+            tools/build_task7_report.py
 
   unit-tests:
     name: Unit tests

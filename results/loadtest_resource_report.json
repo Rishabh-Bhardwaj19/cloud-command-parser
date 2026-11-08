@@ -1,0 +1,17 @@
+{
+  "sampling_duration_seconds": 120.5,
+  "sample_count": 154,
+  "per_pod_peak_usage": {
+    "command-parser-7f87c8f5fc-8pp74": {
+      "peak_cpu_millicores": 1002.0,
+      "peak_memory_mib": 470.0,
+      "samples": 95
+    },
+    "command-parser-7f87c8f5fc-7cqb7": {
+      "peak_cpu_millicores": 873.0,
+      "peak_memory_mib": 582.0,
+      "samples": 59
+    }
+  },
+  "note": "Peak observed values from periodic kubectl top sampling."
+}

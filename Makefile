@@ -24,4 +24,4 @@ test:
 	python3 -m unittest discover -s tests -v
 
 lint: bootstrap-tools
-	.venv-bootstrap/bin/ruff check service tests tools/score.py tools/nacl_sim.py tools/validate_subnets.py tools/make_bad_predictions.py
+	.venv-bootstrap/bin/ruff check service tests tools/score.py tools/nacl_sim.py tools/validate_subnets.py tools/make_bad_predictions.py tools/locustfile.py tools/sample_k8s_resources.py tools/run_locust_benchmark.py tools/build_task7_report.py

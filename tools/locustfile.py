@@ -40,8 +40,14 @@ class ParserUser(HttpUser):
     def parse(self):
         with _lock:
             text = next(_next_text)
-        with self.client.post('/parse', json={'text': text}, timeout=30,
-                              name='/parse', catch_response=True) as resp:
+        with self.client.post(
+            '/parse',
+            json={'text': text},
+            headers={'Host': 'parser.local'},
+            timeout=30,
+            name='/parse',
+            catch_response=True
+        ) as resp:
             if resp.status_code == 200:
                 with _lock:
                     _replicas[resp.headers.get('X-Served-By')] += 1

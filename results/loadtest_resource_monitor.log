@@ -1,0 +1,20 @@
+Resource monitoring started.
+
+=== RESOURCE MONITOR REPORT ===
+{
+  "duration_seconds": 140,
+  "sampling_interval_seconds": 1.0,
+  "sample_count": 117,
+  "per_pod_peak_usage": {
+    "command-parser-7f87c8f5fc-8pp74": {
+      "max_cpu_millicores": 3.0,
+      "max_memory_mib": 406.0,
+      "samples": 117
+    }
+  },
+  "note": "Peak observed values from periodic kubectl top sampling."
+}
+
+Evidence saved:
+results/loadtest_resource_samples.json
+results/loadtest_resource_report.json
