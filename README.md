@@ -16,3 +16,39 @@ score.py and nacl_sim.py need only Python 3 (standard library); run them with -h
 
 Data: commands from SLURP (Bastianelli et al., EMNLP 2020), licensed CC BY 4.0.
 https://github.com/pswietojanski/slurp
+
+## Reproducible deployment
+
+### Prerequisites
+- Docker Desktop with WSL2 integration
+- Python 3 and virtual environment support
+- kubectl, k3d, Helm, curl, tar, sha256sum and GNU Make
+- Internet access to GitHub Releases and the SeaweedFS Helm repository
+
+### Fresh-clone deployment
+
+Clone the repository and run make up:
+
+git clone https://github.com/Rishabh-Bhardwaj19/cloud-command-parser.git
+cd cloud-command-parser
+make up
+
+The bootstrap process creates or reuses k3d, installs SeaweedFS chart 4.52.0, downloads both model archives, verifies the v1 checksum, uploads datasets and models, builds the inference image and applies Kubernetes manifests.
+
+### Inference endpoint
+http://127.0.0.1:8080/parse
+Send the HTTP header Host: parser.local.
+
+### Teardown warning
+make down deletes the entire cloud-command-parser k3d cluster, including Kubernetes namespaces, PVCs and SeaweedFS objects. Local repository files and GitHub Release assets are not deleted.
+
+### Training
+make train
+make train SUBSET=50
+make train VERSION=v2 EPOCHS=4
+
+### Automated checks
+make test
+make lint
+
+GitHub Actions performs linting, unit tests, model evaluation, the 95 percent JSON-validity quality gate, its negative test and secret scanning.

@@ -1,0 +1,100 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: command-parser
+  namespace: app
+  labels:
+    app: command-parser
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: command-parser
+  template:
+    metadata:
+      labels:
+        app: command-parser
+    spec:
+      terminationGracePeriodSeconds: 30
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+      containers:
+        - name: command-parser
+          image: cloud-command-parser:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+          env:
+            - name: MODEL_URI
+              value: "s3://models/v1/"
+            - name: MODEL_VERSION
+              value: "v1"
+            - name: S3_ENDPOINT
+              value: "http://seaweedfs-s3.data.svc.cluster.local:8333"
+            - name: AWS_DEFAULT_REGION
+              value: "us-east-1"
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: service-s3-credentials
+                  key: access_key
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: service-s3-credentials
+                  key: secret_key
+            - name: MAX_NEW_TOKENS
+              value: "64"
+            - name: MODEL_DIR
+              value: "/tmp/cloud-command-parser-model"
+            - name: TORCH_NUM_THREADS
+              value: "1"
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "1Gi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 30
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: http
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 120
+          volumeMounts:
+            - name: temp-storage
+              mountPath: /tmp
+      volumes:
+        - name: temp-storage
+          emptyDir: {}

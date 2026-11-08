@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: command-parser
+  namespace: app
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: parser.local
+      http:
+        paths:
+          - path: /parse
+            pathType: Prefix
+            backend:
+              service:
+                name: command-parser
+                port:
+                  number: 80

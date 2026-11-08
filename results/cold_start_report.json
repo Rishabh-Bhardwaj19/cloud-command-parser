@@ -1,0 +1,42 @@
+{
+  "test": "Three Kubernetes model cold starts",
+  "measurement": "Pod creationTimestamp to Ready condition lastTransitionTime",
+  "hpa_during_test": {
+    "minReplicas": 1,
+    "maxReplicas": 1
+  },
+  "runs": [
+    {
+      "run": 1,
+      "pod": "command-parser-7f87c8f5fc-2z6qw",
+      "creation_timestamp": "2026-11-08T11:24:34Z",
+      "ready_timestamp": "2026-11-08T11:24:45Z",
+      "pod_creation_to_ready_seconds": 11.0,
+      "model_download_started": true,
+      "six_model_files_downloaded": true,
+      "model_ready_log_confirmed": true
+    },
+    {
+      "run": 2,
+      "pod": "command-parser-7f87c8f5fc-bhcn4",
+      "creation_timestamp": "2026-11-08T11:24:46Z",
+      "ready_timestamp": "2026-11-08T11:24:57Z",
+      "pod_creation_to_ready_seconds": 11.0,
+      "model_download_started": true,
+      "six_model_files_downloaded": true,
+      "model_ready_log_confirmed": true
+    },
+    {
+      "run": 3,
+      "pod": "command-parser-7f87c8f5fc-8pp74",
+      "creation_timestamp": "2026-11-08T11:24:59Z",
+      "ready_timestamp": "2026-11-08T11:25:10Z",
+      "pod_creation_to_ready_seconds": 11.0,
+      "model_download_started": true,
+      "six_model_files_downloaded": true,
+      "model_ready_log_confirmed": true
+    }
+  ],
+  "median_cold_start_seconds": 11.0,
+  "all_three_runs_confirmed": true
+}

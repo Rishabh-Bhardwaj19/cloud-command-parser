@@ -1,0 +1,8 @@
+**
+!service/
+!service/Dockerfile
+!service/app.py
+!service/requirements.txt
+!data/
+!data/schema.json
+!service/validation.py

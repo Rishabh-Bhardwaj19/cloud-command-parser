@@ -20,3 +20,7 @@ training/smoke-model/
 # Compressed model archives - uploaded as Release assets
 release-assets/*.tar.gz
 k8s/data/seaweedfs-default-values.yaml
+
+# Reproducible bootstrap cache and isolated bootstrap environment
+.venv-bootstrap/
+.cache/

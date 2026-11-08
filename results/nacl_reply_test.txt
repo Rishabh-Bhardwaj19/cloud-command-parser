@@ -1,0 +1,4 @@
+ R01  inbound  tcp port 60000 10.20.1.1       -> ALLOW (rule 120)  OK
+ R02  outbound tcp port 60000 192.0.2.55      -> ALLOW (rule 110)  OK
+
+Correct: 2 / 2 = 100.0%

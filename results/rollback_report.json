@@ -1,0 +1,20 @@
+{
+  "duration_seconds": 60,
+  "concurrent_workers": 4,
+  "total_requests": 145,
+  "successful_requests": 142,
+  "failed_requests": 3,
+  "http_error_counts": {
+    "502": 3
+  },
+  "model_version_distribution": {
+    "v2": 68,
+    "v1": 74
+  },
+  "pod_distribution": {
+    "command-parser-6fb86f7998-c62kd": 43,
+    "command-parser-6fb86f7998-j5bjx": 25,
+    "command-parser-757d4c6744-2hz46": 46,
+    "command-parser-757d4c6744-6drrt": 28
+  }
+}

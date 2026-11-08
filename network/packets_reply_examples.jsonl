@@ -1,0 +1,2 @@
+{"id":"R01","direction":"inbound","protocol":"tcp","port":60000,"address":"10.20.1.1","expected":"allow"}
+{"id":"R02","direction":"outbound","protocol":"tcp","port":60000,"address":"192.0.2.55","expected":"allow"}

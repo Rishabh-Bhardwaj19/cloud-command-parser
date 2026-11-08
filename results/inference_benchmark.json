@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-11-08T11:19:42.485511+00:00",
+  "total_requests": 50,
+  "successful_requests": 50,
+  "failed_requests": 0,
+  "valid_schema_responses": 50,
+  "http_status_distribution": {
+    "200": 50
+  },
+  "duration_seconds": 19.011,
+  "throughput_requests_per_second": 2.63,
+  "latency_ms": {
+    "minimum": 343.24,
+    "average": 380.1,
+    "p50": 369.28,
+    "p95": 426.19,
+    "maximum": 587.14
+  },
+  "model_version_distribution": {
+    "v1": 50
+  },
+  "pod_distribution": {
+    "command-parser-7f87c8f5fc-jmfzh": 50
+  },
+  "memory_monitoring": {
+    "sample_count": 17,
+    "peak_observed_memory_mib_per_pod": {
+      "command-parser-7f87c8f5fc-jmfzh": 529.0
+    },
+    "overall_peak_observed_memory_mib": 529.0,
+    "sampling_method": "kubectl top pods, approximately 1-second polling"
+  }
+}

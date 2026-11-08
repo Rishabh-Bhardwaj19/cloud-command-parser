@@ -1,0 +1,60 @@
+{
+  "parent_network": "10.20.0.0/16",
+  "allocation_method": "VLSM, largest host requirement first",
+  "subnet_count": 4,
+  "non_overlapping": true,
+  "all_within_parent": true,
+  "sequential_allocation": true,
+  "all_host_requirements_met": true,
+  "allocated_addresses": 1440,
+  "subnets": [
+    {
+      "name": "App",
+      "cidr": "10.20.0.0/22",
+      "network_address": "10.20.0.0",
+      "first_usable": "10.20.0.1",
+      "last_usable": "10.20.3.254",
+      "broadcast_address": "10.20.3.255",
+      "required_hosts": 1000,
+      "available_usable_hosts": 1022,
+      "host_capacity_pass": true,
+      "within_parent": true
+    },
+    {
+      "name": "Public",
+      "cidr": "10.20.4.0/24",
+      "network_address": "10.20.4.0",
+      "first_usable": "10.20.4.1",
+      "last_usable": "10.20.4.254",
+      "broadcast_address": "10.20.4.255",
+      "required_hosts": 250,
+      "available_usable_hosts": 254,
+      "host_capacity_pass": true,
+      "within_parent": true
+    },
+    {
+      "name": "Data",
+      "cidr": "10.20.5.0/25",
+      "network_address": "10.20.5.0",
+      "first_usable": "10.20.5.1",
+      "last_usable": "10.20.5.126",
+      "broadcast_address": "10.20.5.127",
+      "required_hosts": 100,
+      "available_usable_hosts": 126,
+      "host_capacity_pass": true,
+      "within_parent": true
+    },
+    {
+      "name": "Management",
+      "cidr": "10.20.5.128/27",
+      "network_address": "10.20.5.128",
+      "first_usable": "10.20.5.129",
+      "last_usable": "10.20.5.158",
+      "broadcast_address": "10.20.5.159",
+      "required_hosts": 20,
+      "available_usable_hosts": 30,
+      "host_capacity_pass": true,
+      "within_parent": true
+    }
+  ]
+}
