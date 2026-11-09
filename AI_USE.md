@@ -1,39 +1,19 @@
-# AI Usage Disclosure
+# AI Use Disclosure
 
-## Project development
+This project used AI systems as development aids and as the teacher/student components required by the assignment. Their outputs were reviewed and tested rather than accepted automatically.
 
-Generative AI assistance was used as a development aid during this
-Cloud Computing mini-project.
+## ChatGPT (OpenAI)
 
-The assistance included:
-- Discussing the architecture of the object-storage, model-training,
-  inference-service and Kubernetes components.
-- Drafting and reviewing portions of Python, Docker and Kubernetes
-  configuration.
-- Explaining errors encountered during local development and testing.
-- Suggesting test cases, validation checks and report organization.
+ChatGPT was used to explain cloud-computing and knowledge-distillation concepts, help debug Python, Docker and Kubernetes issues, review implementation ideas, suggest test cases and organise the report. I ran suggested commands in the project environment, inspected the resulting files and logs, and used tests and validators to check the implementation. ChatGPT was not used to generate the teacher labels or the validation answers.
 
-All commands and code were reviewed and executed in the project
-environment. Test outputs and performance figures in the project report
-are based on the observed command output and saved result files.
+## Ollama with Phi-3.5-mini-instruct (teacher model)
 
-## Teacher-generated training labels
+Ollama served the required Phi-3.5-mini-instruct teacher with temperature 0 and seed 42. It generated the command-parsing responses used as sequence-level training targets. The worker saved each raw response without manual editing. The cleaning program checked JSON syntax, the exact four-key schema, allowed intents, slot values against the original command and duplicate commands. The cleaning counts and dataset checksum are preserved in `results/cleaning_report.json` and `data/v1/train.sha256`.
 
-The Phi-3.5 model served through Ollama was used as the teacher to
-generate structured command-parser labels. The worker pipeline saved
-the teacher's raw responses. The cleaning stage then checked JSON
-validity, the required keys, allowed intents, slot values and duplicate
-commands before creating the training dataset.
+## EleutherAI/Pythia-70M with Hugging Face Transformers
 
-## Student model
+Pythia-70M was the student model specified by the assignment. It was fine-tuned locally with PyTorch and Transformers on the teacher-generated training set. The untrained model and both trained versions were evaluated against the separate 100-example validation set. Raw predictions and score reports are preserved in `results/`.
 
-EleutherAI/pythia-70m was fine-tuned using PyTorch and Transformers on
-the cleaned teacher-labelled dataset. Two student versions were trained
-and evaluated. The model evaluation used a separate validation dataset.
+## Verification and responsibility
 
-## Human responsibility
-
-AI assistance does not replace the project's implementation,
-verification or academic responsibility. The project author is
-responsible for understanding the design, checking the code, validating
-the results and explaining the submitted work.
+I reviewed the implementation and used repeatable checks rather than accepting generated suggestions without validation. Verification included Python unit tests, Ruff linting, the scoring script and its 95% JSON-validity quality gate, the NACL simulator, subnet validation, container API and fault-injection checks, Kubernetes probes and recovery tests, Locust measurements, SHA-256 checks and GitHub Actions. Measured results and known failures are reported as observed. I remain responsible for understanding, explaining and maintaining the submitted work.

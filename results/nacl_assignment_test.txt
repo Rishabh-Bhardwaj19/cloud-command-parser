@@ -1,0 +1,20 @@
+ A01  inbound  tcp port 80    203.0.113.10    -> ALLOW (rule 110)  OK
+ A02  inbound  tcp port 443   203.0.113.10    -> ALLOW (rule 120)  OK
+ A03  inbound  tcp port 80    198.51.100.9    -> DENY  (rule 100)  OK
+ A04  inbound  tcp port 443   198.51.100.9    -> DENY  (rule 100)  OK
+ A05  inbound  tcp port 22    10.20.5.130     -> ALLOW (rule 130)  OK
+ A06  inbound  tcp port 22    203.0.113.10    -> DENY  (no match (default deny))  OK
+ A07  inbound  tcp port 55000 10.20.1.20      -> ALLOW (rule 140)  OK
+ A08  inbound  tcp port 1000  10.20.1.20      -> DENY  (no match (default deny))  OK
+ A09  outbound tcp port 8000  10.20.1.20      -> ALLOW (rule 100)  OK
+ A10  outbound tcp port 1000  10.20.5.20      -> DENY  (no match (default deny))  OK
+ A11  outbound tcp port 55000 203.0.113.10    -> ALLOW (rule 110)  OK
+ A12  outbound tcp port 443   203.0.113.10    -> DENY  (no match (default deny))  OK
+ A13  inbound  udp port 80    203.0.113.10    -> DENY  (no match (default deny))  OK
+ A14  outbound udp port 55000 203.0.113.10    -> DENY  (no match (default deny))  OK
+ A15  inbound  tcp port 22    10.20.5.159     -> ALLOW (rule 130)  OK
+ A16  inbound  tcp port 22    10.20.5.160     -> DENY  (no match (default deny))  OK
+ A17  inbound  icmp port 0     198.51.100.77   -> DENY  (rule 100)  OK
+ A18  inbound  tcp port 8080  198.51.100.77   -> DENY  (rule 100)  OK
+
+Correct: 18 / 18 = 100.0%

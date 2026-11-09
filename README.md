@@ -1,54 +1,96 @@
-# Student Kit: Cloud Computing Mini Project
+# Cloud Command Parser — CS3081 Mini Project
 
-Read the project handout first. It explains every file here.
+**Student:** Rishabh Bhardwaj
+**Roll number:** 230101059
+**Programme / section:** B.Tech CSE Core, Section A
+**Semester:** VII
+**Instructor:** Dr Salam Michael Singh, Assistant Professor, CSE, IIIT Manipur
 
-    data/commands_pool.jsonl     3,000 commands (text only)
-    data/validation.jsonl        100 labelled commands, for evaluation only (never train on them)
-    data/schema.json             the four keys, the eight intents and the slot rules
-    data/rate_card.json          hypothetical prices for the cost exercise
-    tools/score.py               python tools/score.py PREDICTIONS data/validation.jsonl [--min-validity 95]
-    tools/locustfile.py          pip install locust, then:
-                                 locust -f tools/locustfile.py --headless --users 4 --spawn-rate 4 --run-time 2m --host http://localhost:8080 --csv results/loadtest
-    tools/nacl_sim.py            python tools/nacl_sim.py network/nacl.json network/packets_sample.jsonl --check
-    network/packets_sample.jsonl six sample packets with expected decisions
+**GitHub repository:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser
+**Model release:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser/releases/tag/v1.0.0
 
-score.py and nacl_sim.py need only Python 3 (standard library); run them with -h for help. The load test needs Locust (https://locust.io).
+## Project summary
 
-Data: commands from SLURP (Bastianelli et al., EMNLP 2020), licensed CC BY 4.0.
-https://github.com/pswietojanski/slurp
+This project applies sequence-level knowledge distillation to an English command-parsing task. A Phi-3.5 teacher served through Ollama labels 3,000 commands. Two parallel workers write raw teacher responses to SeaweedFS object storage. The cleaned dataset is used to fine-tune EleutherAI/Pythia-70M on CPU. A FastAPI inference service downloads its selected model and tokenizer from S3-compatible storage and runs in a local k3d Kubernetes cluster.
 
-## Reproducible deployment
+## Repository layout
 
-### Prerequisites
-- Docker Desktop with WSL2 integration
-- Python 3 and virtual environment support
-- kubectl, k3d, Helm, curl, tar, sha256sum and GNU Make
-- Internet access to GitHub Releases and the SeaweedFS Helm repository
+- `cluster/` — k3d cluster configuration.
+- `data/` — source commands, validation labels, schema, rate card and cleaned training data.
+- `prompts/` and `worker/` — teacher prompt, parallel labelling worker and cleaner.
+- `training/` — training configuration, CPU training script and epoch loss log.
+- `models/` — checksum metadata only; model weights are distributed as GitHub Release assets, not committed to Git.
+- `service/` — FastAPI inference service, schema validation and pinned container dependencies.
+- `k8s/` — SeaweedFS, worker and application Kubernetes manifests.
+- `network/` — VLSM allocation, public-subnet NACL and test packets.
+- `tests/` and `tools/` — automated tests, scoring, NACL/subnet validators, benchmarks and Locust helpers.
+- `scripts/` — bootstrap, object-storage initialization and teardown.
+- `results/` — cleaning, evaluation, inference, Kubernetes, NACL, CI and Locust evidence.
+- `report/report.pdf` — technical report (eight main pages, plus references).
+- `AI_USE.md` — AI-use disclosure and verification approach.
 
-### Fresh-clone deployment
+## Prerequisites
 
-Clone the repository and run make up:
+- Docker Desktop with WSL2 integration and sufficient disk/RAM for the local model image.
+- Python 3, GNU Make, `kubectl`, `k3d`, Helm, `curl`, `tar` and `sha256sum`.
+- Internet access to the GitHub Release and SeaweedFS Helm chart repository.
 
+## Fresh-checkout deployment
+
+From a shell with the prerequisites installed:
+
+```bash
 git clone https://github.com/Rishabh-Bhardwaj19/cloud-command-parser.git
 cd cloud-command-parser
 make up
+```
 
-The bootstrap process creates or reuses k3d, installs SeaweedFS chart 4.52.0, downloads both model archives, verifies the v1 checksum, uploads datasets and models, builds the inference image and applies Kubernetes manifests.
+`make up` runs `scripts/bootstrap.sh`. It creates the configured k3d cluster if absent (or reuses it), installs SeaweedFS chart 4.52.0, downloads the v1/v2 model archives from Release `v1.0.0`, verifies the v1 archive checksum, uploads datasets and model files to SeaweedFS, builds/imports the CPU inference image, applies the app manifests and waits for the Deployment rollout.
 
-### Inference endpoint
-http://127.0.0.1:8080/parse
-Send the HTTP header Host: parser.local.
+**Reproducibility qualification:** the bootstrap command was run repeatedly and completed successfully against the existing populated local cluster. The brand-new-cluster branch is implemented in the script but was not independently exercised because deleting the evidence-bearing cluster would remove the locally stored original teacher shards and object-store state. Do not interpret the existing-cluster rerun as a fresh-cluster test.
 
-### Teardown warning
-make down deletes the entire cloud-command-parser k3d cluster, including Kubernetes namespaces, PVCs and SeaweedFS objects. Local repository files and GitHub Release assets are not deleted.
+## Inference endpoint
 
-### Training
+The k3d configuration maps the ingress to `http://127.0.0.1:8080`. Send `Host: parser.local`:
+
+```bash
+curl -sS -X POST http://127.0.0.1:8080/parse \
+  -H 'Host: parser.local' \
+  -H 'Content-Type: application/json' \
+  -d '{"text":"set an alarm for seven am tomorrow"}'
+```
+
+The service exposes `POST /parse`, `GET /healthz` and `GET /readyz`. A valid parse returns exactly the four schema keys and includes `X-Model-Version` and `X-Served-By` response headers.
+
+## Training and checks
+
+The training environment used for the recorded runs is Python 3.14.4, torch 2.15.0+cpu, Transformers 5.22.2 and PyYAML 6.0.3. Prepare the isolated CPU training environment once; training parameters are read from `training/config.yaml`.
+
+```bash
+python3 -m venv .venv-training
+.venv-training/bin/python -m pip install --index-url https://download.pytorch.org/whl/cpu torch==2.15.0+cpu
+.venv-training/bin/python -m pip install transformers==5.22.2 PyYAML==6.0.3
 make train
 make train SUBSET=50
 make train VERSION=v2 EPOCHS=4
-
-### Automated checks
 make test
 make lint
+```
 
-GitHub Actions performs linting, unit tests, model evaluation, the 95 percent JSON-validity quality gate, its negative test and secret scanning.
+The instructor's validation file is evaluation-only and is never used for training. The standard Locust run is documented in `tools/locustfile.py`; captured outputs are under `results/`.
+
+## CI/CD
+
+GitHub Actions runs lint, then unit tests, then model evaluation/quality gates, followed by secret scanning. Model evaluation downloads the v1 archive from Release `v1.0.0` and enforces at least 95% JSON validity. The main workflow also verifies that intentionally bad predictions are rejected. A separate manually dispatched workflow, `Negative Model Quality Gate Demonstration`, runs untrained Pythia through the 95% gate to produce the expected failing-run evidence.
+
+## Teardown warning
+
+`make down` deletes the entire `cloud-command-parser` k3d cluster, including its namespaces, PVCs and SeaweedFS objects. It is intentionally destructive. Repository files and GitHub Release assets are not deleted. It was not run against the evidence-bearing cluster used for this submission.
+
+## Results and known limitations
+
+The measured results and limitations are documented in `report/report.pdf` and the machine-readable files in `results/`. In particular, the two-minute Locust run recorded 8 HTTP 500 invalid-model-output responses out of 194 attempts (4.12%); this is above the assignment's 1% error-rate target. The p95 latency was 4,800 ms, within the 5,000 ms target. The rolling-update experiment recorded 3 HTTP 502 responses in 220 attempts (1.36%), above the 0.5% target. Pod-deletion recovery achieved 150/150 successful requests. The local k3d environment is single-node and does not demonstrate multi-node fault tolerance.
+
+## Dataset attribution
+
+The command data are derived from SLURP (Bastianelli et al., EMNLP 2020), licensed under CC BY 4.0: https://github.com/pswietojanski/slurp

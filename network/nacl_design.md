@@ -1,55 +1,19 @@
-# NACL Design and Stateless Reply Traffic
+# Public-subnet NACL design (CS3081 Task 5)
 
-## General behavior
+The public subnet is `10.20.4.0/24`. The remaining VLSM allocations are app `10.20.0.0/22`, data `10.20.5.0/25`, and management `10.20.5.128/27`.
 
-The NACL is stateless. It does not automatically allow response traffic
-because a request packet was allowed. Every inbound and outbound packet
-is evaluated independently.
+The NACL is stateless, so a response packet is evaluated independently from the request. The public subnet therefore has an inbound rule for TCP destination ports 1024-65535 from the app subnet (application replies to client ephemeral ports) and an outbound rule for TCP destination ports 1024-65535 to any client (load-balancer replies).
 
-The simulator checks rules in ascending rule-number order. The first
-matching rule decides the packet action. If no rule matches, the packet
-is denied. Rule 32766 explicitly denies all remaining traffic.
+The inbound deny for `198.51.100.0/24` is rule 100, before the public HTTP/HTTPS allow rules. This ordering is essential: first matching rule wins, so placing the deny after the web allows would let traffic from the blocked range reach those ports.
 
-## Inbound rules
+| Direction | Rule | Match | Action | Reason |
+|---|---:|---|---|---|
+| Inbound | 100 | Any protocol/port from `198.51.100.0/24` | Deny | Block known abusive range before any allow |
+| Inbound | 110 | TCP destination 80 from anywhere | Allow | HTTP |
+| Inbound | 120 | TCP destination 443 from anywhere | Allow | HTTPS |
+| Inbound | 130 | TCP destination 22 from `10.20.5.128/27` | Allow | SSH only from management |
+| Inbound | 140 | TCP destination 1024-65535 from `10.20.0.0/22` | Allow | App-subnet replies to client ephemeral ports |
+| Outbound | 100 | TCP destination 8000 to `10.20.0.0/22` | Allow | Forward application traffic |
+| Outbound | 110 | TCP destination 1024-65535 to anywhere | Allow | Return traffic to client ephemeral ports |
 
-| Rule | Protocol | Destination port | Source CIDR | Action | Purpose |
-|---:|---|---|---|---|---|
-| 100 | TCP | 22 | 0.0.0.0/0 | Deny | Block SSH |
-| 110 | TCP | 5432 | 10.20.5.0/25 | Deny | Block direct database access |
-| 120 | TCP | 1024-65535 | 10.20.0.0/22 | Allow | Permit ephemeral-port replies from app subnet |
-| 130 | TCP | 443 | 192.0.2.0/24 | Allow | Permit HTTPS from approved public range |
-| 140 | TCP | 443 | 0.0.0.0/0 | Deny | Deny HTTPS from other sources |
-| 32766 | All | All | 0.0.0.0/0 | Deny | Explicit fallback deny |
-
-## Outbound rules
-
-| Rule | Protocol | Destination port | Destination CIDR | Action | Purpose |
-|---:|---|---|---|---|---|
-| 100 | TCP | 8000 | 10.20.0.0/22 | Allow | Permit application service traffic |
-| 110 | TCP | 1024-65535 | 192.0.2.0/24 | Allow | Permit ephemeral-port replies to approved public clients |
-| 32766 | All | All | 0.0.0.0/0 | Deny | Explicit fallback deny |
-
-## Stateless reply examples
-
-1. An outbound TCP connection to an application service on port 8000
-   can receive a response from the app subnet on an ephemeral client
-   port. The inbound rule 120 explicitly permits that return packet.
-
-2. An inbound HTTPS request from an approved public client reaches
-   destination port 443. Its outbound response is sent to the client's
-   ephemeral port. Outbound rule 110 explicitly permits that return packet.
-
-These response permissions are required because the NACL is stateless.
-
-## Rule ordering
-
-Specific restrictions and permissions are evaluated before the
-fallback deny rule.
-
-- Rule 100 blocks SSH before any later rule is considered.
-- Rule 110 blocks TCP database access from the data subnet.
-- Rule 130 permits HTTPS from the approved public CIDR.
-- Rule 140 denies HTTPS from all other source addresses.
-- Rule 32766 denies all traffic that did not match an earlier rule.
-
-The lower the rule number, the earlier the rule is evaluated.
+All unmatched traffic is denied. The rule file is validated with the supplied standard-library `tools/nacl_sim.py` simulator using both the six starter packets and additional requirement-focused cases in `network/packets_assignment_examples.jsonl`.
