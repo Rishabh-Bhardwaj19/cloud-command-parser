@@ -1,12 +1,12 @@
 # Cloud Command Parser — CS3081 Mini Project
 
-**Student:** Rishabh Bhardwaj  
-**Roll number:** 230101059  
-**Programme / section:** B.Tech CSE Core, Section A  
-**Semester:** VII  
+**Student:** Rishabh Bhardwaj
+**Roll number:** 230101059
+**Programme / section:** B.Tech CSE Core, Section A
+**Semester:** VII
 **Instructor:** Dr Salam Michael Singh, Assistant Professor, CSE, IIIT Manipur
 
-**GitHub repository:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser  
+**GitHub repository:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser
 **Model release:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser/releases/tag/v1.0.0
 
 ## Project summary
