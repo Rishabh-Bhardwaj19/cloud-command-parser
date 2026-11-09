@@ -1,12 +1,12 @@
 # Cloud Command Parser — CS3081 Mini Project
 
-**Student:** Rishabh Bhardwaj
-**Roll number:** 230101059
-**Programme / section:** B.Tech CSE Core, Section A
-**Semester:** VII
+**Student:** Rishabh Bhardwaj  
+**Roll number:** 230101059  
+**Programme / section:** B.Tech CSE Core, Section A  
+**Semester:** VII  
 **Instructor:** Dr Salam Michael Singh, Assistant Professor, CSE, IIIT Manipur
 
-**GitHub repository:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser
+**GitHub repository:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser  
 **Model release:** https://github.com/Rishabh-Bhardwaj19/cloud-command-parser/releases/tag/v1.0.0
 
 ## Project summary
@@ -81,7 +81,7 @@ The instructor's validation file is evaluation-only and is never used for traini
 
 ## CI/CD
 
-GitHub Actions runs lint, then unit tests, then model evaluation/quality gates, followed by secret scanning. Model evaluation downloads the v1 archive from Release `v1.0.0` and enforces at least 95% JSON validity. The main workflow also verifies that intentionally bad predictions are rejected. A separate manually dispatched workflow, `Negative Model Quality Gate Demonstration`, runs untrained Pythia through the 95% gate to produce the expected failing-run evidence.
+GitHub Actions runs lint, then unit tests, then model evaluation/quality gates, followed by secret scanning. Model evaluation downloads the v1 archive from Release `v1.0.0` and enforces at least 95% JSON validity. The main workflow also verifies that intentionally bad predictions are rejected. A separate manually dispatched workflow, `Negative Model Quality Gate Demonstration`, runs untrained Pythia through the 95% gate to produce the expected failing-run evidence. The demonstrated run scored 0.0% JSON validity on 100 validation examples and was rejected as expected: https://github.com/Rishabh-Bhardwaj19/cloud-command-parser/actions/runs/42552381986. The job log is https://github.com/Rishabh-Bhardwaj19/cloud-command-parser/actions/runs/42552381986/job/128950598887; the report and raw predictions are retained in `results/negative_quality_gate/`.
 
 ## Teardown warning
 
